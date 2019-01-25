@@ -1,0 +1,39 @@
+instalar api
+npm install -g json-server
+https://www.npmjs.com/package/json-server
+
+Para iniciar a API
+json-server server.json -p 3001 -w -d 500
+
+Heroku
+npm install --global heroku
+
+heroku login
+
+https://elements.heroku.com/buildpacks/mars/create-react-app-buildpack
+heroku create $APP_NAME --buildpack mars/create-react-app
+git remoto
+git add .
+git commit -m "Start with create-react-app"
+git push heroku master
+
+Para abrir o site
+heroku open
+
+
+Para definir variaveis de ambiente
+heroku config:set NOME_VARIAVEL=VALOR
+heroku config:set REACT_APP_API_URL=http://endereco_da_api
+
+Para criar servidor local
+npm install --global pm2 server
+
+Para criar o site e executar
+npm run build
+pm2 serve build
+
+pm2 list - para listar processos
+pm2 monit - para gerenciar
+
+Para persistir o redux
+npm install redux-persist
